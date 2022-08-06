@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/background"
+        tools:context=".FirstPassActivity"
+
+        >
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/tvRegister"
+            android:text="@string/register"
+            android:textStyle="bold"
+            android:textSize="@dimen/layout_margin_40sp"
+            android:textAlignment="center"
+            android:textColor="@color/white"
+            android:layout_marginTop="@dimen/layout_margin_30dp"
+            />
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/layout_margin_60dp"
+            android:hint="Enter First Name"
+            android:paddingLeft="10dp"
+            android:textColorHint="@color/black"
+            android:layout_marginTop="@dimen/layout_margin_30dp"
+            android:id="@+id/etFirstName"
+
+            />
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/layout_margin_60dp"
+            android:hint="Enter Last Name"
+            android:paddingLeft="10dp"
+            android:textColorHint="@color/black"
+            android:layout_marginTop="@dimen/layout_margin_5dp"
+            android:id="@+id/etLastName"
+
+            />
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/layout_margin_60dp"
+            android:hint="Enter Email"
+            android:paddingLeft="10dp"
+            android:textColorHint="@color/black"
+            android:layout_marginTop="@dimen/layout_margin_5dp"
+            android:id="@+id/etEnterEmail"
+
+            />
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/layout_margin_60dp"
+            android:hint="Set Password"
+            android:digits="0123456789"
+            android:inputType="number"
+            android:paddingLeft="10dp"
+            android:textColorHint="@color/black"
+            android:layout_marginTop="@dimen/layout_margin_5dp"
+            android:id="@+id/etSetPassword"
+
+            />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Gender"
+            android:textAlignment="center"
+            android:textSize="@dimen/layout_margin_20sp"
+            android:textColor="@color/black"
+            android:visibility="gone"
+
+            />
+
+
+        <RadioGroup
+            android:id="@+id/rgGender"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:visibility="gone"
+            >
+
+            <RadioButton
+                android:id="@+id/rbMale"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+
+                android:text="@string/male" />
+
+            <RadioButton
+                android:id="@+id/rbFemale"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+
+                android:text="@string/female" />
+
+            <RadioButton
+                android:id="@+id/rbTransgender"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+
+                android:text="@string/transgender" />
+        </RadioGroup>
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="60dp"
+            android:layout_marginLeft="158dp"
+            android:layout_marginTop="20dp"
+            android:text="Submit"
+            android:id="@+id/btnSubmit"
+            android:backgroundTint="@color/design_default_color_secondary_variant"
+
+            />
+
+
+
+    </LinearLayout>
+</layout>
