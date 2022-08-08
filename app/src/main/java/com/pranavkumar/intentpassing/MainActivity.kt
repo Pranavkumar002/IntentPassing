@@ -4,14 +4,25 @@ import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Toast
+import androidx.core.widget.doOnTextChanged
 import com.pranavkumar.intentpassing.databinding.ActivityMainBinding
 
 class MainActivity : AppCompatActivity() {
     lateinit var binding : ActivityMainBinding
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)t
+        super.onCreate(savedInstanceState)
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
+
+        binding.etSetPassword.doOnTextChanged { text, _, _, _ ->
+            if((text?.length ?:0) <6){
+                binding.etSetPassword.error = resources.getString(R.string.at_least_6_numbers)
+
+            }else{
+                binding.etSetPassword.error = null
+            }
+        }
 
         binding.btnSubmit.setOnClickListener{
             System.out.println("clicked")
